@@ -1,10 +1,11 @@
 class Implementations
   def initialize(array)
-    @array = array 
+    @array = array
   end
 
   def valid?
     return false if @array.empty?
+
     true
   end
 
@@ -39,10 +40,12 @@ end
 
 output_array = Implementations.new([1, 2, 3])
 
-p output_array.my_map {|element| element + 1}
+map_array = output_array.my_map { |element| element + 1 }
+p map_array
 puts
-p output_array.my_select {|element| element > 2}
+select_array = output_array.my_select { |element| element > 2 }
+p select_array
 puts
-output_array.my_each do |element| 
+output_array.my_each do |element|
   puts element * 2
 end
