@@ -3,12 +3,6 @@ class Implementations
     @array = array
   end
 
-  def valid?
-    return false if @array.empty?
-
-    true
-  end
-
   def my_map
     my_array = []
     element = 0
@@ -35,6 +29,14 @@ class Implementations
       yield(@array[element])
       element += 1
     end
+  end
+
+  private
+
+  def valid?
+    return false if @array.empty?
+
+    true
   end
 end
 
