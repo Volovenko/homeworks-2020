@@ -31,8 +31,6 @@ class Implementations
     end
   end
 
-  private
-
   def valid?
     return false if @array.empty?
 
