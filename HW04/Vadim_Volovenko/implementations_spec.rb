@@ -22,8 +22,8 @@ RSpec.describe Implementations do
   end
 
   describe '#my_map' do
-    context 'when array valid' do
-      it 'return right array' do
+    context 'when array is present' do
+      it 'transforms an array based on block conditions' do
         expect(subject.my_map { |element| element + 1 }).to eq [2, 3, 4]
       end
     end
