@@ -40,10 +40,9 @@ RSpec.describe Implementations do
   describe '#my_each' do
     context 'when strings valid' do
       it 'return right string' do
-        expectation = expect do
+        expect do
           (subject.my_each { |element| puts element * 2 })
-        end
-        expectation.to output("2\n4\n6\n").to_stdout
+        end.to output("2\n4\n6\n").to_stdout
       end
     end
   end
